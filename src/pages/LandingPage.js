@@ -1,10 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
-import moduleName from 'elements/Button'
+import NavBar from "./LandingPage";
+
 export default class LandingPage extends Component {
   render() {
     return (
-      <div>LandingPage</div>
-    )
+      <>
+        <NavBar {...this.props}></NavBar>
+      </>
+    );
   }
 }
