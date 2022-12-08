@@ -8,7 +8,7 @@ export default function Header(props) {
   };
 
   return (
-    <header className="border-b-2 border-b-gray-200 w-full h-20 flex items-center">
+    <header className="border-b-2 border-b-gray-200 w-full h-20 flex items-center mb-20">
       <div className="w-full">
         <nav className="flex justify-between px-36">
           <BrandIcon />
