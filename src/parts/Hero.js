@@ -4,16 +4,22 @@ import IconTraveler from "../assets/images/icons/ic_traveler.svg";
 import IconTreasure from "../assets/images/icons/ic_treasure.svg";
 import Button from "../elements/Button";
 import ImageHero from "../assets/images/hero.png";
+// import HeroImage from "../assets/images/picture.svg";
+// import Frame from "../assets/images/frame.svg";
 
 export default function Hero(props) {
-  function showMostPicked() {
-    window.scrollTo({
-      top: props.refMostPicked?.current.offsetTop - 30,
-      behavior: "smooth",
-    });
+  //   function showMostPicked() {
+  //     window.scrollTo({
+  //       top: props.refMostPicked?.current.offsetTop - 30,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  function numberFormat(number) {
+    const formated = new Intl.NumberFormat("en-EN");
+    return formated.format(number);
   }
   return (
-    <section className="px-36">
+    <section className="px-36 mb-20">
       <div className="flex flex-row contents-center items-center">
         <div className="flex flex-col contents-center pr-5">
           <h1 className="font-bold text-head text-dark-blue pb-5">
@@ -37,7 +43,7 @@ export default function Hero(props) {
                 alt={`${props.data.travelers} Travelers`}
               />
               <h6 className="mt-3">
-                {props.data.travelers}{" "}
+                {numberFormat(props.data.travelers)}{" "}
                 <span className="text-gray-500 font-light"> travellers</span>
               </h6>
             </div>
@@ -49,7 +55,7 @@ export default function Hero(props) {
                 alt={`${props.data.treasures} Treasures`}
               />
               <h6 className="mt-3">
-                {props.data.treasures}{" "}
+                {numberFormat(props.data.treasures)}{" "}
                 <span className="text-gray-500 font-light"> treasures</span>
               </h6>
             </div>
@@ -61,7 +67,7 @@ export default function Hero(props) {
                 alt={`${props.data.cities} Cities`}
               />
               <h6 className="mt-3">
-                {props.data.cities}{" "}
+                {numberFormat(props.data.cities)}{" "}
                 <span className="text-gray-500 font-light"> cities</span>
               </h6>
             </div>
@@ -75,6 +81,18 @@ export default function Hero(props) {
             alt="Frame room with couches"
           />
         </div>
+        {/* <div className="bg-red-400 ">
+          <img
+            src={HeroImage}
+            alt="Room with couches"
+            className=" relative z-10 -left-4 -top-4"
+          />
+          <img
+            src={Frame}
+            alt="Frame Room with couches"
+            className=" relative -right-4 -bottom-4"
+          />
+        </div> */}
       </div>
     </section>
   );
