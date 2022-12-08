@@ -8,12 +8,12 @@ import ImageHero from "../assets/images/hero.png";
 // import Frame from "../assets/images/frame.svg";
 
 export default function Hero(props) {
-  //   function showMostPicked() {
-  //     window.scrollTo({
-  //       top: props.refMostPicked?.current.offsetTop - 30,
-  //       behavior: "smooth",
-  //     });
-  //   }
+  function showMostPicked() {
+    window.scrollTo({
+      top: props.refMostPicked?.current.offsetTop - 30,
+      behavior: "smooth",
+    });
+  }
   function numberFormat(number) {
     const formated = new Intl.NumberFormat("en-EN");
     return formated.format(number);
@@ -32,7 +32,7 @@ export default function Hero(props) {
             make another memorable moments.
           </p>
           <div width={210}>
-            <Button>Show Me Now</Button>
+            <Button onClick={showMostPicked}>Show Me Now</Button>
           </div>
           <div className="mt-20 flex flex-row">
             <div className="flex flex-col mr-12">
