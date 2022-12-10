@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function MostPicked(props) {
   return (
     <section className="px-36 mb-[70px]" ref={props.refMostPicked}>
-      <h4 className="text-2xl mb-5">Most Picked</h4>
+      <h4 className="text-2xl mb-5 font-poppins text-dark-blue">Most Picked</h4>
       <div className="grid grid-rows-2 grid-flow-col gap-7">
         {props.data?.map((item, index) => {
           return (
@@ -17,11 +17,11 @@ export default function MostPicked(props) {
               }
             >
               <div
-                className="inline-flex items-center justify-center rounded-tr-2xl 
+                className="inline-flex items-center justify-center rounded-tr-2xl font-poppins
               rounded-bl-2xl bg-magenta text-white font-medium z-10 w-[180px] h-[40px] absolute right-0"
               >
                 ${item.price}
-                <span className="font-light text-white pl-1">
+                <span className="font-light text-white pl-1 font-poppins">
                   per {item.unit}
                 </span>
               </div>

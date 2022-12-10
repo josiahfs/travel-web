@@ -5,7 +5,9 @@ export default function Categories({ data }) {
   return data.map((category, index1) => {
     return (
       <section className="px-36 mb-[70px]" key={`category-${index1}`}>
-        <h4 className="text-2xl mb-5">{category.name}</h4>
+        <h4 className="text-2xl mb-5 font-poppins text-dark-blue">
+          {category.name}
+        </h4>
         <div className="flex flex-row justify-between">
           {category?.items.length === 0 ? (
             <div>There is no property in this category</div>
@@ -22,7 +24,7 @@ export default function Categories({ data }) {
                         className="inline-flex items-center justify-center rounded-tr-2xl 
               rounded-bl-2xl bg-magenta text-white font-medium z-10 w-[180px] h-[40px] absolute right-0"
                       >
-                        <div className="text-white font-medium">
+                        <div className="text-white font-medium font-poppin">
                           Popular{" "}
                           <span className="text-white font-light">choice</span>
                         </div>

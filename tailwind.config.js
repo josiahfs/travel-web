@@ -8,13 +8,14 @@ module.exports = {
         "dark-blue": "#152C5B",
         magenta: "#FF498B",
       },
-      fontFamily: {
-        poppins: ["Poppins"],
-      },
+
       fontSize: {
         head: "2.625rem",
         desc: ["16px", "27px"],
       },
+    },
+    fontFamily: {
+      poppins: ["Poppins"],
     },
   },
   plugins: [],
