@@ -4,6 +4,7 @@ import IconTraveler from "../assets/images/icons/ic_traveler.svg";
 import IconTreasure from "../assets/images/icons/ic_treasure.svg";
 import Button from "../elements/Button";
 import ImageHero from "../assets/images/hero.png";
+import Fade from "react-reveal/Fade";
 // import HeroImage from "../assets/images/picture.svg";
 // import Frame from "../assets/images/frame.svg";
 
@@ -20,77 +21,78 @@ export default function Hero(props) {
   }
   return (
     <section className="px-36 mb-20">
-      <div className="flex flex-row contents-center items-center">
-        <div className="flex flex-col contents-center pr-5">
-          <h1 className="font-poppins font-bold text-head text-dark-blue pb-5">
-            Forget Busy Work,
-            <br />
-            Start Next Vacation
-          </h1>
-          <p className="font-poppins font-light text-desc text-light-gray w-7/12 mb-7">
-            We provide what you need to enjoy your holiday with family. Time to
-            make another memorable moments.
-          </p>
-          <div width={210}>
-            <Button onClick={showMostPicked}>Show Me Now</Button>
+      <Fade bottom>
+        <div className="flex flex-row contents-center items-center">
+          <div className="flex flex-col contents-center pr-5">
+            <h1 className="font-poppins font-bold text-head text-dark-blue pb-5">
+              Forget Busy Work,
+              <br />
+              Start Next Vacation
+            </h1>
+            <p className="font-poppins font-light text-desc text-light-gray w-7/12 mb-7">
+              We provide what you need to enjoy your holiday with family. Time
+              to make another memorable moments.
+            </p>
+            <div width={210}>
+              <Button onClick={showMostPicked}>Show Me Now</Button>
+            </div>
+            <div className="mt-20 flex flex-row">
+              <div className="flex flex-col mr-12">
+                <img
+                  width={36}
+                  height={36}
+                  src={IconTraveler}
+                  alt={`${props.data.travelers} Travelers`}
+                />
+                <h6 className="mt-3">
+                  {numberFormat(props.data.travelers)}{" "}
+                  <span className="text-light-gray font-light font-poppins">
+                    {" "}
+                    travellers
+                  </span>
+                </h6>
+              </div>
+              <div className="flex flex-col mr-12">
+                <img
+                  width={36}
+                  height={36}
+                  src={IconTreasure}
+                  alt={`${props.data.treasures} Treasures`}
+                />
+                <h6 className="mt-3">
+                  {numberFormat(props.data.treasures)}{" "}
+                  <span className="text-light-gray font-light font-poppins">
+                    {" "}
+                    treasures
+                  </span>
+                </h6>
+              </div>
+              <div className="flex flex-col">
+                <img
+                  width={36}
+                  height={36}
+                  src={IconCities}
+                  alt={`${props.data.cities} Cities`}
+                />
+                <h6 className="mt-3">
+                  {numberFormat(props.data.cities)}{" "}
+                  <span className="text-light-gray font-light font-poppins">
+                    {" "}
+                    cities
+                  </span>
+                </h6>
+              </div>
+            </div>
           </div>
-          <div className="mt-20 flex flex-row">
-            <div className="flex flex-col mr-12">
-              <img
-                width={36}
-                height={36}
-                src={IconTraveler}
-                alt={`${props.data.travelers} Travelers`}
-              />
-              <h6 className="mt-3">
-                {numberFormat(props.data.travelers)}{" "}
-                <span className="text-light-gray font-light font-poppins">
-                  {" "}
-                  travellers
-                </span>
-              </h6>
-            </div>
-            <div className="flex flex-col mr-12">
-              <img
-                width={36}
-                height={36}
-                src={IconTreasure}
-                alt={`${props.data.treasures} Treasures`}
-              />
-              <h6 className="mt-3">
-                {numberFormat(props.data.treasures)}{" "}
-                <span className="text-light-gray font-light font-poppins">
-                  {" "}
-                  treasures
-                </span>
-              </h6>
-            </div>
-            <div className="flex flex-col">
-              <img
-                width={36}
-                height={36}
-                src={IconCities}
-                alt={`${props.data.cities} Cities`}
-              />
-              <h6 className="mt-3">
-                {numberFormat(props.data.cities)}{" "}
-                <span className="text-light-gray font-light font-poppins">
-                  {" "}
-                  cities
-                </span>
-              </h6>
-            </div>
+          <div>
+            <img
+              width={700}
+              height={590}
+              src={ImageHero}
+              alt="Frame room with couches"
+            />
           </div>
-        </div>
-        <div>
-          <img
-            width={700}
-            height={590}
-            src={ImageHero}
-            alt="Frame room with couches"
-          />
-        </div>
-        {/* <div className="bg-red-400 ">
+          {/* <div className="bg-red-400 ">
           <img
             src={HeroImage}
             alt="Room with couches"
@@ -102,7 +104,8 @@ export default function Hero(props) {
             className=" relative -right-4 -bottom-4"
           />
         </div> */}
-      </div>
+        </div>
+      </Fade>
     </section>
   );
 }
