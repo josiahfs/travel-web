@@ -7,6 +7,7 @@ module.exports = {
         primary: "#3252DF",
         "dark-blue": "#152C5B",
         magenta: "#FF498B",
+        "light-gray": "#B0B0B0",
       },
 
       fontSize: {

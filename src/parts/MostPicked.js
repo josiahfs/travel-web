@@ -41,9 +41,9 @@ export default function MostPicked(props) {
                   />
                 </div>
                 <div className="absolute left-5 bottom-5 z-10 group-hover:bottom-6 ease-in-out duration-300">
-                  <Link className="text-white font-regular text-xl">
+                  <Link className="text-white font-regular text-xl font-poppins">
                     {item.name} <br />
-                    <span className="text-white font-light text-[15px]">
+                    <span className="text-white font-light text-[15px] font-poppins">
                       {item.city}, {item.country}{" "}
                     </span>
                   </Link>

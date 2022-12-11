@@ -22,7 +22,7 @@ export default function Testimony({ data }) {
           <p className="text-dark-blue text-[32px] font-poppins w-[600px] font-light ml-[5px] mt-2">
             {data.content}
           </p>
-          <p className="text-gray-400 text-[18px] font-poppins font-light ml-[5px] mt-2">
+          <p className="text-light-gray text-[18px] font-poppins font-light ml-[5px] mt-2">
             {data.familyName}
             {", "} <span> {data.familyOccupation} </span>
           </p>

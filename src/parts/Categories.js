@@ -24,7 +24,7 @@ export default function Categories({ data }) {
                         className="inline-flex items-center justify-center rounded-tr-2xl 
               rounded-bl-2xl bg-magenta text-white font-medium z-10 w-[180px] h-[40px] absolute right-0"
                       >
-                        <div className="text-white font-medium font-poppin">
+                        <div className="text-white font-medium font-poppins">
                           Popular{" "}
                           <span className="text-white font-light">choice</span>
                         </div>
@@ -39,9 +39,9 @@ export default function Categories({ data }) {
                     </div>
                   </div>
                   <div className="mt-4">
-                    <Link className="text-dark-blue font-regular text-xl">
+                    <Link className="text-dark-blue font-regular text-xl font-poppins">
                       {item.name} <br />
-                      <span className="text-gray-400 font-light text-[15px]">
+                      <span className="text-light-gray font-light text-[15px] font-poppins">
                         {item.city}, {item.country}{" "}
                       </span>
                     </Link>

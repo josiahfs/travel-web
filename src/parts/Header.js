@@ -1,6 +1,6 @@
 import React from "react";
 import NavItem from "../elements/NavItem";
-import BrandIcon from "./IconText";
+import BrandIcon from "../elements/IconText";
 
 export default function Header(props) {
   const getNavLinkClass = (path) => {
