@@ -11,9 +11,9 @@ export default function Testimony({ data }) {
         <div className="flex flex-row items-center mr-20">
           <img src={TestiImage} alt="Testi"></img>
           <div className="flex flex-col pl-[75px]">
-            <h4 className="text-dark-blue text-2xl font-poppins font-medium ml-[5px]">
+            <p className="text-dark-blue text-2xl font-poppins font-medium ml-[5px]">
               {data.name}
-            </h4>
+            </p>
             <div className="flex flex-row mt-10">
               <img width={34} height={34} src={StarIcon} alt="rating"></img>
               <img width={34} height={34} src={StarIcon} alt="rating"></img>
