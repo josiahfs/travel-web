@@ -1,3 +1,5 @@
+/* eslint-disable testing-library/no-node-access */
+/* eslint-disable testing-library/no-container */
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import InputNumber from "./index";
@@ -15,6 +17,8 @@ class TestInput extends React.Component {
     return (
       <InputNumber
         max={30}
+        isSuffixPlural
+        suffix=""
         onChange={this.handleChange}
         name="value"
         value={this.state.value}
